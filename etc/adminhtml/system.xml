@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module/Config/etc/system_file.xsd">
+    <system>
+        <section id="tinxit_b2bpricing_tool" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>B2B Pricing test tool</label>
+            <tab>tinxit</tab>
+            <resource>TinxIT_B2BPricing::tinxit_b2bpricingtool</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                <field id="enable_testtool" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enable debug tool</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>enable tool to display customer data</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

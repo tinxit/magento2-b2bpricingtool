@@ -1,0 +1,31 @@
+<?php
+/**
+ * Theme by LostofPixels 2023
+ * @var $block Magento\Framework\View\Element\Template
+ * @var $customerdataviewmodel LotsofPixels\Theme\ViewModel\CustomerData
+ * @var $escaper Magento\Framework\Escaper
+ */
+$customerdataviewmodel = $block->getData('customer_data_view_model');
+if ($customerdataviewmodel->getCustomerName()) : ?>
+<div class="tinx-debug-box">
+    <div class="page-main">
+    <table style="width:350px; border:1px solid green">
+        <tr>
+            <th style="background: darkseagreen;">Decription</th><th style="background: darkseagreen;">Value</th>
+        </tr>
+        <tr>
+            <td><?= __('BC Customer number') ?></td> <td><?= $escaper->escapeHtml($customerdataviewmodel->getERPCustomerNumber());?></td>
+        </tr>
+        <tr>
+            <td><?= __('BC Customer Discount Group')?></td><td><?= $escaper->escapeHtml($customerdataviewmodel->getERPCustomerDiscountGroup()) ;?></td>
+        </tr>
+        <tr>
+            <td><?= __('BC Customer Price Group')?></td><td><?= $escaper->escapeHtml($customerdataviewmodel->getERPCustomerPriceGroup());?></td>
+        </tr>
+        <tr>
+            <td><?= __('BC Customer Currency Code')?></td><td><?= $escaper->escapeHtml($customerdataviewmodel->getERPCurrencyCode());?></td>
+        </tr>
+    </table>
+</div>
+</div>
+<?php endif; ?>

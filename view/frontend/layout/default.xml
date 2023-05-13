@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+        <!--
+        /**
+         * Copyright © Magento, Inc. All rights reserved.
+         * See COPYING.txt for license details.
+         */
+        -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<body>
+    <referenceContainer name="before.body.end">
+    <container name="customer-data-container" htmlTag="div" htmlId="customer-data-container" after="-" >
+        <block name="customer-data" template="TinxIT_B2bpricingtool::customer-data.phtml" ifconfig="tinxit_b2bpricing_tool/general/enable_testtool">
+            <arguments>
+                <argument name="customer_data_view_model" xsi:type="object">TinxIT\B2bpricingtool\ViewModel\CustomerData</argument>
+            </arguments>
+        </block>
+    </container>
+    </referenceContainer>
+</body>
+</page>
+
